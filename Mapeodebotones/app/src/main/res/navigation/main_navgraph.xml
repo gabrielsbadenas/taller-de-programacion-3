@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navgraph"
+    app:startDestination="@id/mainMenu">
+
+    <fragment
+        android:id="@+id/mainMenu"
+        android:name="com.mapeode.mapeodebotones.MainMenu"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
+        <action
+            android:id="@+id/action_mainMenu_to_typeSelection"
+            app:destination="@id/typeSelection" />
+    </fragment>
+    <fragment
+        android:id="@+id/typeSelection"
+        android:name="com.mapeode.mapeodebotones.TypeSelection"
+        android:label="fragment_type_selection"
+        tools:layout="@layout/fragment_type_selection" >
+        <action
+            android:id="@+id/action_typeSelection_to_emulatorSelection"
+            app:destination="@id/emulatorSelection" />
+        <action
+            android:id="@+id/action_typeSelection_to_gameSelection"
+            app:destination="@id/gameSelection" />
+    </fragment>
+    <fragment
+        android:id="@+id/emulatorSelection"
+        android:name="com.mapeode.mapeodebotones.EmulatorSelection"
+        android:label="fragment_emulator_selection"
+        tools:layout="@layout/fragment_emulator_selection" >
+        <action
+            android:id="@+id/action_emulatorSelection_to_buttonTable"
+            app:destination="@id/buttonTable" />
+    </fragment>
+    <fragment
+        android:id="@+id/buttonTable"
+        android:name="com.mapeode.mapeodebotones.ButtonTable"
+        android:label="fragment_button_table"
+        tools:layout="@layout/fragment_button_table" >
+        <action
+            android:id="@+id/action_buttonTable_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_buttonTable_to_buttonSelection"
+            app:destination="@id/buttonSelection" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameSelection"
+        android:name="com.mapeode.mapeodebotones.GameSelection"
+        android:label="fragment_game_selection"
+        tools:layout="@layout/fragment_game_selection" >
+        <action
+            android:id="@+id/action_gameSelection_to_actionTable"
+            app:destination="@id/actionTable" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionTable"
+        android:name="com.mapeode.mapeodebotones.ActionTable"
+        android:label="fragment_action_table"
+        tools:layout="@layout/fragment_action_table" >
+        <action
+            android:id="@+id/action_actionTable_to_mainMenu"
+            app:destination="@id/mainMenu" />
+        <action
+            android:id="@+id/action_actionTable_to_actionSelection"
+            app:destination="@id/actionSelection" />
+    </fragment>
+    <fragment
+        android:id="@+id/buttonSelection"
+        android:name="com.mapeode.mapeodebotones.ButtonSelection"
+        android:label="fragment_button_selection"
+        tools:layout="@layout/fragment_button_selection" >
+        <action
+            android:id="@+id/action_buttonSelection_to_buttonTable"
+            app:destination="@id/buttonTable" />
+    </fragment>
+    <fragment
+        android:id="@+id/actionSelection"
+        android:name="com.mapeode.mapeodebotones.ActionSelection"
+        android:label="fragment_action_selection"
+        tools:layout="@layout/fragment_action_selection" >
+        <action
+            android:id="@+id/action_actionSelection_to_actionTable"
+            app:destination="@id/actionTable" />
+    </fragment>
+</navigation>
