@@ -26,6 +26,7 @@ class GameSelection : Fragment() {
         bottomText = v.findViewById(R.id.gsBottomText)
         topText.text = "What is the name of the game?"
         bottomText.text = "which controller are you going to use?"
+        btnGoToActionTableFromGameSelection.text = "next"
         return v
     }
 

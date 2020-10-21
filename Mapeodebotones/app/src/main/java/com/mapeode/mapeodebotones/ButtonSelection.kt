@@ -24,8 +24,9 @@ class ButtonSelection : Fragment() {
         btnGoToButtonTableFromButtonSelection = v.findViewById(R.id.btnGoToButtonTableFromButtonSelection)
         topText = v.findViewById(R.id.bsTopText)
         bottomText = v.findViewById(R.id.bsBottomText)
-        topText.text = "which console are you going to emulate?"
-        bottomText.text = "which controller are you going to use?"
+        topText.text = "emulated button"
+        bottomText.text = "button in your controller"
+        btnGoToButtonTableFromButtonSelection.text = "enter"
         return v
     }
 

@@ -24,8 +24,9 @@ class ActionSelection : Fragment() {
         btnGoToActionTableFromActionSelection = v.findViewById(R.id.btnGoToActionTableFromActionSelection)
         topText = v.findViewById(R.id.asTopText)
         bottomText = v.findViewById(R.id.asBottomText)
-        topText.text = "What is the name of the game?"
-        bottomText.text = "which controller are you going to use?"
+        topText.text = "What is the name of the action?"
+        bottomText.text = "select the button of the action"
+        btnGoToActionTableFromActionSelection.text = "enter"
         return v
     }
 
