@@ -1,4 +1,4 @@
-package com.mapeode.mapeodebotones
+package com.mapeode.mapeodebotones.uiElements
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,8 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.TextView
 import androidx.navigation.findNavController
+import com.mapeode.mapeodebotones.uiElements.EmulatorSelectionDirections
+import com.mapeode.mapeodebotones.R
 
 class EmulatorSelection : Fragment() {
 

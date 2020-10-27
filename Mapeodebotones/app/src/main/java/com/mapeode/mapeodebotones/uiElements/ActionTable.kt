@@ -1,4 +1,4 @@
-package com.mapeode.mapeodebotones
+package com.mapeode.mapeodebotones.uiElements
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import androidx.navigation.findNavController
+import com.mapeode.mapeodebotones.uiElements.ActionTableDirections
+import com.mapeode.mapeodebotones.R
 
 class ActionTable : Fragment() {
 

@@ -14,79 +14,86 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="216dp">
 
         <TextView
-            android:id="@+id/txt_name_item"
+            android:id="@+id/item_kind_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pepe"
+            android:text="kindName"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_name_item5"
-            app:layout_constraintEnd_toStartOf="@+id/txt_name_item4"
+            app:layout_constraintBottom_toTopOf="@+id/item_controller_name"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/item_kind"
+            app:layout_constraintTop_toBottomOf="@+id/item_type_name" />
+
+        <TextView
+            android:id="@+id/item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:text="type"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_kind"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/txt_name_item2"
+            android:id="@+id/item_controller_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pepe"
+            android:text="controllerName"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/buttonItem"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_name_item6"
-            app:layout_constraintTop_toBottomOf="@+id/txt_name_item3" />
+            app:layout_constraintStart_toEndOf="@+id/item_controller"
+            app:layout_constraintTop_toBottomOf="@+id/item_kind_name" />
 
         <TextView
-            android:id="@+id/txt_name_item3"
+            android:id="@+id/item_controller"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pepe"
+            android:layout_marginStart="64dp"
+            android:text="controller:"
             android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_name_item2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_name_item4"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txt_name_item4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pepe"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toTopOf="@+id/txt_name_item6"
-            app:layout_constraintEnd_toStartOf="@+id/txt_name_item3"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_name_item"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/txt_name_item5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pepe"
-            android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txt_name_item6"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/buttonItem"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txt_name_item" />
+            app:layout_constraintTop_toBottomOf="@+id/item_kind" />
 
         <TextView
-            android:id="@+id/txt_name_item6"
+            android:id="@+id/item_kind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pepe"
+            android:layout_marginStart="64dp"
+            android:text="kind"
             android:textSize="18sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/txt_name_item2"
+            app:layout_constraintBottom_toTopOf="@+id/item_controller"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_type" />
+
+        <TextView
+            android:id="@+id/item_type_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="typeName"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/item_kind_name"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/txt_name_item5"
-            app:layout_constraintTop_toBottomOf="@+id/txt_name_item4" />
+            app:layout_constraintStart_toEndOf="@+id/item_type"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/buttonItem"
+            android:layout_width="224dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="24dp"
+            android:text="open"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>

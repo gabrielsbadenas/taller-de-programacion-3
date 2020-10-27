@@ -7,16 +7,19 @@
 
     <fragment
         android:id="@+id/mainMenu"
-        android:name="com.mapeode.mapeodebotones.MainMenu"
+        android:name="com.mapeode.mapeodebotones.uiElements.MainMenu"
         android:label="fragment_main_menu"
         tools:layout="@layout/fragment_main_menu" >
         <action
             android:id="@+id/action_mainMenu_to_typeSelection"
             app:destination="@id/typeSelection" />
+        <action
+            android:id="@+id/action_mainMenu_to_genericMappingList"
+            app:destination="@id/genericMappingList" />
     </fragment>
     <fragment
         android:id="@+id/typeSelection"
-        android:name="com.mapeode.mapeodebotones.TypeSelection"
+        android:name="com.mapeode.mapeodebotones.uiElements.TypeSelection"
         android:label="fragment_type_selection"
         tools:layout="@layout/fragment_type_selection" >
         <action
@@ -28,7 +31,7 @@
     </fragment>
     <fragment
         android:id="@+id/emulatorSelection"
-        android:name="com.mapeode.mapeodebotones.EmulatorSelection"
+        android:name="com.mapeode.mapeodebotones.uiElements.EmulatorSelection"
         android:label="fragment_emulator_selection"
         tools:layout="@layout/fragment_emulator_selection" >
         <action
@@ -37,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/buttonTable"
-        android:name="com.mapeode.mapeodebotones.ButtonTable"
+        android:name="com.mapeode.mapeodebotones.uiElements.ButtonTable"
         android:label="fragment_button_table"
         tools:layout="@layout/fragment_button_table" >
         <action
@@ -49,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/gameSelection"
-        android:name="com.mapeode.mapeodebotones.GameSelection"
+        android:name="com.mapeode.mapeodebotones.uiElements.GameSelection"
         android:label="fragment_game_selection"
         tools:layout="@layout/fragment_game_selection" >
         <action
@@ -58,7 +61,7 @@
     </fragment>
     <fragment
         android:id="@+id/actionTable"
-        android:name="com.mapeode.mapeodebotones.ActionTable"
+        android:name="com.mapeode.mapeodebotones.uiElements.ActionTable"
         android:label="fragment_action_table"
         tools:layout="@layout/fragment_action_table" >
         <action
@@ -70,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/buttonSelection"
-        android:name="com.mapeode.mapeodebotones.ButtonSelection"
+        android:name="com.mapeode.mapeodebotones.uiElements.ButtonSelection"
         android:label="fragment_button_selection"
         tools:layout="@layout/fragment_button_selection" >
         <action
@@ -79,11 +82,15 @@
     </fragment>
     <fragment
         android:id="@+id/actionSelection"
-        android:name="com.mapeode.mapeodebotones.ActionSelection"
+        android:name="com.mapeode.mapeodebotones.uiElements.ActionSelection"
         android:label="fragment_action_selection"
         tools:layout="@layout/fragment_action_selection" >
         <action
             android:id="@+id/action_actionSelection_to_actionTable"
             app:destination="@id/actionTable" />
     </fragment>
+    <fragment
+        android:id="@+id/genericMappingList"
+        android:name="com.mapeode.mapeodebotones.uiElements.GenericMappingList"
+        android:label="GenericMappingList" />
 </navigation>
