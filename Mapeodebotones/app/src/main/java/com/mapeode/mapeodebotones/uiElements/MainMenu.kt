@@ -14,6 +14,7 @@ import com.mapeode.mapeodebotones.uiElements.MainMenuDirections
 import com.mapeode.mapeodebotones.R
 import com.mapeode.mapeodebotones.entities.Emulator
 import com.mapeode.mapeodebotones.entities.Game
+import com.mapeode.mapeodebotones.entities.GenericMapping
 import com.mapeode.mapeodebotones.entities.Mapping
 
 class MainMenu : Fragment() {
@@ -64,6 +65,9 @@ class MainMenu : Fragment() {
     }
 
     private fun fillMappings(){
+        val xd = Emulator("game boy","kolke")
+        xd.buttons.add(GenericMapping("a","b","c","d"))
+        mappings.add(xd)
         mappings.add(Emulator("nes","xbox one x"))
         mappings.add(Game("tetris","wiimote"))
         mappings.add(Game("soulcalibur 2","dualshock 4"))
