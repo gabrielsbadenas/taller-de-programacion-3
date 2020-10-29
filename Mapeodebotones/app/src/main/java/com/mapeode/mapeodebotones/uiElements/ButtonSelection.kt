@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import com.mapeode.mapeodebotones.uiElements.ButtonSelectionDirections
 import com.mapeode.mapeodebotones.R
+import com.mapeode.mapeodebotones.entities.Emulator
 
 class ButtonSelection : Fragment() {
 
@@ -17,6 +18,8 @@ class ButtonSelection : Fragment() {
     lateinit var btnGoToButtonTableFromButtonSelection: Button
     lateinit var topText: TextView
     lateinit var bottomText: TextView
+    lateinit var topInput: String
+    lateinit var bottomInput: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +32,15 @@ class ButtonSelection : Fragment() {
         topText.text = "emulated button"
         bottomText.text = "button in your controller"
         btnGoToButtonTableFromButtonSelection.text = "enter"
+        topInput = "topInput"
+        bottomInput = "bottomInput"
         return v
     }
 
     override fun onStart() {
         super.onStart()
         btnGoToButtonTableFromButtonSelection.setOnClickListener {
-            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable()
+            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable(Emulator(topInput, bottomInput))
             v.findNavController().navigate(action2)
         }
     }

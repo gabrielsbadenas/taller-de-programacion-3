@@ -34,6 +34,10 @@ open class Mapping() : Parcelable {
         return 0
     }
 
+    open fun add(actionNameOrEmulatedButton: String, controllerButton: String, type: String, kind: String="controller:"){
+        this.buttons.add(GenericMapping(actionNameOrEmulatedButton, controllerButton,type, kind))
+    }
+
     companion object CREATOR : Parcelable.Creator<Mapping> {
         override fun createFromParcel(parcel: Parcel): Mapping {
             return Mapping(parcel)
@@ -43,4 +47,6 @@ open class Mapping() : Parcelable {
             return arrayOfNulls(size)
         }
     }
+
+    open fun add(actionNameOrEmulatedButton: String, controllerButton: String) {}
 }

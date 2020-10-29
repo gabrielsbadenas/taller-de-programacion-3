@@ -1,4 +1,8 @@
+
+
 package com.mapeode.mapeodebotones.uiElements
+
+import com.mapeode.mapeodebotones.uiElements.GenericMappingListArgs
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

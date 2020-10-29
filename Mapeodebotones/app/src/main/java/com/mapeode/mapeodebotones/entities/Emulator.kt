@@ -7,4 +7,7 @@ open class Emulator(kindName: String, controllerName: String): Mapping() {
         this.kindName = kindName
         this.controllerName = controllerName
     }
+    override fun add(actionNameOrEmulatedButton: String, controllerButton: String){
+        this.buttons.add(GenericMapping(actionNameOrEmulatedButton,controllerButton,"button:"))
+    }
 }

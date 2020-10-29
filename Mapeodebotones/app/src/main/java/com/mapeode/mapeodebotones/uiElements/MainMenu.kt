@@ -66,10 +66,12 @@ class MainMenu : Fragment() {
 
     private fun fillMappings(){
         val xd = Emulator("game boy","kolke")
-        xd.buttons.add(GenericMapping("a","b","c","d"))
+        xd.add("a","b")
+        val ej = Game("tetris","wiimote")
+        ej.add("spin","a")
         mappings.add(xd)
         mappings.add(Emulator("nes","xbox one x"))
-        mappings.add(Game("tetris","wiimote"))
+        mappings.add(ej)
         mappings.add(Game("soulcalibur 2","dualshock 4"))
     }
 
