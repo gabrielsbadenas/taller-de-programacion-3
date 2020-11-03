@@ -45,7 +45,7 @@ class MainMenu : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        fillMappings()
+        //fillMappings()
         recMapping.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(context)
         recMapping.layoutManager = linearLayoutManager

@@ -73,6 +73,9 @@
         <action
             android:id="@+id/action_actionTable_to_actionSelection"
             app:destination="@id/actionSelection" />
+        <argument
+            android:name="game"
+            app:argType="com.mapeode.mapeodebotones.entities.Game" />
     </fragment>
     <fragment
         android:id="@+id/buttonSelection"

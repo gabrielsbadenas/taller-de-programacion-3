@@ -10,6 +10,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import com.mapeode.mapeodebotones.uiElements.GameSelectionDirections
 import com.mapeode.mapeodebotones.R
+import com.mapeode.mapeodebotones.entities.Game
 
 class GameSelection : Fragment() {
 
@@ -35,7 +36,7 @@ class GameSelection : Fragment() {
     override fun onStart() {
         super.onStart()
         btnGoToActionTableFromGameSelection.setOnClickListener {
-            val action2 = GameSelectionDirections.actionGameSelectionToActionTable()
+            val action2 = GameSelectionDirections.actionGameSelectionToActionTable(Game(topText.text as String, bottomText.text as String))
             v.findNavController().navigate(action2)
         }
     }
