@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Spinner
 import android.widget.TextView
 import androidx.navigation.findNavController
 import com.mapeode.mapeodebotones.uiElements.GameSelectionDirections
@@ -18,6 +19,7 @@ class GameSelection : Fragment() {
     lateinit var btnGoToActionTableFromGameSelection: Button
     lateinit var topText: TextView
     lateinit var bottomText: TextView
+    lateinit var spinner: Spinner
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +32,9 @@ class GameSelection : Fragment() {
         topText.text = "What is the name of the game?"
         bottomText.text = "which controller are you going to use?"
         btnGoToActionTableFromGameSelection.text = "next"
+
+        spinner = v.findViewById(R.id.gsSpinner)
+
         return v
     }
 

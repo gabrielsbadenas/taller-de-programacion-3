@@ -16,10 +16,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner5" />
+        app:layout_constraintTop_toBottomOf="@+id/gsSpinner" />
 
     <Spinner
-        android:id="@+id/spinner5"
+        android:id="@+id/gsSpinner"
         android:layout_width="234dp"
         android:layout_height="0dp"
         android:layout_marginTop="20dp"

@@ -34,7 +34,8 @@ class ButtonTable : Fragment() {
             v.findNavController().navigate(action2)
         }
         btnGoToMainMenuFromButtonTable.setOnClickListener {
-            val action1 = ButtonTableDirections.actionButtonTableToMainMenu()
+            val mapping = ButtonTableArgs.fromBundle(requireArguments()).emulator
+            val action1 = ButtonTableDirections.actionButtonTableToMainMenu(mapping)
             v.findNavController().navigate(action1)
         }
     }

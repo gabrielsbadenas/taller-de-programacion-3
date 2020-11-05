@@ -36,6 +36,11 @@ class MainMenu : Fragment() {
         v = inflater.inflate(R.layout.fragment_main_menu,container,false)
         btnGoToTypeSelectionFromMainMenu = v.findViewById(R.id.btnGoToTypeSelectionFromMainMenu)
         recMapping = v.findViewById(R.id.recyclerView)
+        recMapping.setHasFixedSize(true)
+        linearLayoutManager = LinearLayoutManager(context)
+        recMapping.layoutManager = linearLayoutManager
+        mappingListAdapter = MappingListAdapter(mappings)
+        recMapping.adapter = mappingListAdapter
         return v
     }
 
@@ -45,34 +50,16 @@ class MainMenu : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        //fillMappings()
-        recMapping.setHasFixedSize(true)
-        linearLayoutManager = LinearLayoutManager(context)
-        recMapping.layoutManager = linearLayoutManager
-        mappingListAdapter = MappingListAdapter(mappings){ x ->
-            onItemClick(x)
+        val new = MainMenuArgs.fromBundle(requireArguments()).mapping
+        if (new != null) {
+            mappings.add(new)
+            mappingListAdapter = MappingListAdapter(mappings)
+            recMapping.adapter = mappingListAdapter
         }
-        recMapping.adapter = mappingListAdapter
+
         btnGoToTypeSelectionFromMainMenu.setOnClickListener {
             val action2 = MainMenuDirections.actionMainMenuToTypeSelection()
             v.findNavController().navigate(action2)
         }
     }
-
-    private fun onItemClick(position: Int): Boolean {
-        Snackbar.make(v,position.toString(),Snackbar.LENGTH_SHORT).show()
-        return true
-    }
-
-    private fun fillMappings(){
-        val xd = Emulator("game boy","kolke")
-        xd.add("a","b")
-        val ej = Game("tetris","wiimote")
-        ej.add("spin","a")
-        mappings.add(xd)
-        mappings.add(Emulator("nes","xbox one x"))
-        mappings.add(ej)
-        mappings.add(Game("soulcalibur 2","dualshock 4"))
-    }
-
 }

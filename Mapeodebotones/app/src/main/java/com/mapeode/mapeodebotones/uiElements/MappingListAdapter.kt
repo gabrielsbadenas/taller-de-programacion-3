@@ -12,8 +12,7 @@ import com.mapeode.mapeodebotones.R
 import com.mapeode.mapeodebotones.entities.Mapping
 
 class MappingListAdapter(
-        private var mappingList: MutableList<Mapping>,
-        val onItemClick: (Int) -> Boolean
+        private var mappingList: MutableList<Mapping>
 ) : RecyclerView.Adapter<MappingListAdapter.MappingHolder>(){
 
     companion object {
@@ -27,9 +26,6 @@ class MappingListAdapter(
 
     override fun onBindViewHolder(holder: MappingHolder, position: Int) {
         holder.setMapping(mappingList[position])
-        holder.getCardLayout().setOnLongClickListener() {
-            onItemClick(position)
-        }
         holder.getButton().setOnClickListener {
             val action2 = MainMenuDirections.actionMainMenuToGenericMappingList(mappingList[position])
             holder.view.findNavController().navigate(action2)
