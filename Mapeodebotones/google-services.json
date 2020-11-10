@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "839871221626",
+    "firebase_url": "https://mapeo-de-botones.firebaseio.com",
+    "project_id": "mapeo-de-botones",
+    "storage_bucket": "mapeo-de-botones.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839871221626:android:118604f0711e245aecd0c3",
+        "android_client_info": {
+          "package_name": "com.mapeode.mapeodebotones"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "839871221626-2sabs4jk9v7o86vsun11pkk4m4agldgo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjODX1epBXAtB8h7NMReaSnBmFcn0rBfU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "839871221626-2sabs4jk9v7o86vsun11pkk4m4agldgo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
