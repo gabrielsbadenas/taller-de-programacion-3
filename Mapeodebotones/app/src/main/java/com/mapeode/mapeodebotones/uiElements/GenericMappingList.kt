@@ -2,8 +2,6 @@
 
 package com.mapeode.mapeodebotones.uiElements
 
-import com.mapeode.mapeodebotones.uiElements.GenericMappingListArgs
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -37,7 +35,8 @@ class GenericMappingList : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        buttons = GenericMappingListArgs.fromBundle(requireArguments()).mapping.buttons
+        //buttons = GenericMappingListArgs.fromBundle(requireArguments()).mapping.buttons
+        buttons = ArrayList()
         recMapping.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this.context)
         recMapping.layoutManager = linearLayoutManager

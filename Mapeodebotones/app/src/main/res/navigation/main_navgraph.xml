@@ -16,11 +16,6 @@
         <action
             android:id="@+id/action_mainMenu_to_genericMappingList"
             app:destination="@id/genericMappingList" />
-        <argument
-            android:name="mapping"
-            app:argType="com.mapeode.mapeodebotones.entities.Mapping"
-            app:nullable="true"
-            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/typeSelection"
@@ -55,8 +50,10 @@
             android:id="@+id/action_buttonTable_to_buttonSelection"
             app:destination="@id/buttonSelection" />
         <argument
-            android:name="emulator"
-            app:argType="com.mapeode.mapeodebotones.entities.Emulator" />
+            android:name="id"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="id" />
     </fragment>
     <fragment
         android:id="@+id/gameSelection"
@@ -78,9 +75,6 @@
         <action
             android:id="@+id/action_actionTable_to_actionSelection"
             app:destination="@id/actionSelection" />
-        <argument
-            android:name="game"
-            app:argType="com.mapeode.mapeodebotones.entities.Game" />
     </fragment>
     <fragment
         android:id="@+id/buttonSelection"
@@ -103,9 +97,5 @@
     <fragment
         android:id="@+id/genericMappingList"
         android:name="com.mapeode.mapeodebotones.uiElements.GenericMappingList"
-        android:label="GenericMappingList" >
-        <argument
-            android:name="mapping"
-            app:argType="com.mapeode.mapeodebotones.entities.Mapping" />
-    </fragment>
+        android:label="GenericMappingList" />
 </navigation>

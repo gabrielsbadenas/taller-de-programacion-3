@@ -40,7 +40,7 @@ class ButtonSelection : Fragment() {
     override fun onStart() {
         super.onStart()
         btnGoToButtonTableFromButtonSelection.setOnClickListener {
-            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable(Emulator(topInput, bottomInput))
+            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable()
             v.findNavController().navigate(action2)
         }
     }

@@ -27,7 +27,8 @@ class MappingListAdapter(
     override fun onBindViewHolder(holder: MappingHolder, position: Int) {
         holder.setMapping(mappingList[position])
         holder.getButton().setOnClickListener {
-            val action2 = MainMenuDirections.actionMainMenuToGenericMappingList(mappingList[position])
+            //val action2 = MainMenuDirections.actionMainMenuToGenericMappingList(mappingList[position])
+            val action2 = MainMenuDirections.actionMainMenuToGenericMappingList()
             holder.view.findNavController().navigate(action2)
         }
     }

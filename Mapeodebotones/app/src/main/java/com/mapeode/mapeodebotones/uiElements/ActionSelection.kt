@@ -36,7 +36,7 @@ class ActionSelection : Fragment() {
     override fun onStart() {
         super.onStart()
         btnGoToActionTableFromActionSelection.setOnClickListener {
-            val action2 = ActionSelectionDirections.actionActionSelectionToActionTable(Game(topText.text as String, bottomText.text as String))
+            val action2 = ActionSelectionDirections.actionActionSelectionToActionTable()
             v.findNavController().navigate(action2)
         }
     }
