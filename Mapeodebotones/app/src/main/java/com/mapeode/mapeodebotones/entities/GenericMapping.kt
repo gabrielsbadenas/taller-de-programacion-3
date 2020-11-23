@@ -1,6 +1,6 @@
 package com.mapeode.mapeodebotones.entities
 
-class GenericMapping(actionNameOrEmulatedButton: String, controllerButton: String,type: String="action/button:", kind: String="controller:") {
+class GenericMapping(actionNameOrEmulatedButton: String="", controllerButton: String="",type: String="action/button:", kind: String="controller:") {
     var actionNameOrEmulatedButton: String = ""
     var controllerButton: String = ""
     var type: String="action/button:"

@@ -54,8 +54,10 @@ class GameSelection : Fragment() {
         super.onStart()
         btnGoToActionTableFromGameSelection.setOnClickListener {
             //addGame(editText.text.toString(),controller)
-            val data = editText.text.toString()+"-"+controller+"-"+java.util.UUID.randomUUID().toString()
-            db.collection("mappings").document(data).set(Game(editText.text.toString(),controller))
+            val data = editText.text.toString()+"-"+controller+"-"+java
+                    .util.UUID.randomUUID().toString()
+            db.collection("mappings").document(data)
+                    .set(Game(editText.text.toString(),controller))
             val action2 = GameSelectionDirections.actionGameSelectionToActionTable()
             v.findNavController().navigate(action2)
         }

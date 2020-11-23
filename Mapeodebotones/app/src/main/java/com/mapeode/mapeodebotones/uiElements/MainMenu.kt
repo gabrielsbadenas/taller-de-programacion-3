@@ -23,7 +23,7 @@ class MainMenu : Fragment() {
     lateinit var btnGoToTypeSelectionFromMainMenu: Button
     lateinit var recMapping : RecyclerView
     private lateinit var linearLayoutManager: LinearLayoutManager
-    var mappings : MutableList<Mapping> = ArrayList<Mapping>()
+    lateinit var mappings : MutableList<Mapping>
     private lateinit var mappingListAdapter: MappingListAdapter
     var db: FirebaseFirestore = FirebaseFirestore.getInstance()
 
@@ -41,8 +41,7 @@ class MainMenu : Fragment() {
         recMapping.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(context)
         recMapping.layoutManager = linearLayoutManager
-        mappingListAdapter = MappingListAdapter(mappings)
-        recMapping.adapter = mappingListAdapter
+        mappings = ArrayList<Mapping>()
         todos("mappings", mappings)
         return v
     }

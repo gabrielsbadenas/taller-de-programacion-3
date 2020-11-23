@@ -15,6 +15,7 @@ class ButtonTable : Fragment() {
     lateinit var v : View
     lateinit var btnGoToButtonSelectionFromButtonTable: Button
     lateinit var btnGoToMainMenuFromButtonTable: Button
+    lateinit var id: String
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,14 +24,15 @@ class ButtonTable : Fragment() {
         v = inflater.inflate(R.layout.fragment_button_table,container,false)
         btnGoToButtonSelectionFromButtonTable = v.findViewById(R.id.btnGoToButtonSelectionFromButtonTable)
         btnGoToMainMenuFromButtonTable = v.findViewById(R.id.btnGoToGameMappingFromTypeSelection)
+
         return v
     }
 
     override fun onStart() {
         super.onStart()
+        id = ButtonTableArgs.fromBundle(requireArguments()).id.toString()
         btnGoToButtonSelectionFromButtonTable.setOnClickListener {
-            val action2 = ButtonTableDirections.actionButtonTableToButtonSelection()
-            //val action2 = 0
+            val action2 = ButtonTableDirections.actionButtonTableToButtonSelection(id)
             v.findNavController().navigate(action2)
         }
         btnGoToMainMenuFromButtonTable.setOnClickListener {
