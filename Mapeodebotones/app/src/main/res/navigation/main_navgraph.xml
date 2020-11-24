@@ -101,5 +101,9 @@
     <fragment
         android:id="@+id/genericMappingList"
         android:name="com.mapeode.mapeodebotones.uiElements.GenericMappingList"
-        android:label="GenericMappingList" />
+        android:label="GenericMappingList" >
+        <argument
+            android:name="buttons"
+            app:argType="com.mapeode.mapeodebotones.entities.Mapping" />
+    </fragment>
 </navigation>

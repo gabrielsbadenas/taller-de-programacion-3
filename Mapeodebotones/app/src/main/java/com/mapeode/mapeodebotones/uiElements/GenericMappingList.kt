@@ -35,8 +35,8 @@ class GenericMappingList : Fragment() {
 
     override fun onStart() {
         super.onStart()
-        //buttons = GenericMappingListArgs.fromBundle(requireArguments()).mapping.buttons
-        buttons = ArrayList()
+        buttons = GenericMappingListArgs.fromBundle(requireArguments()).buttons.buttons
+        //buttons = ArrayList()
         recMapping.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this.context)
         recMapping.layoutManager = linearLayoutManager

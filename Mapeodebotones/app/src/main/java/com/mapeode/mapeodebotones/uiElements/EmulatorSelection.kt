@@ -56,7 +56,7 @@ class EmulatorSelection : Fragment() {
         btnGoToButtonTableFromEmulatorSelection.setOnClickListener {
             val data = console+"-"+controller+"-"+java.util.UUID.randomUUID().toString()
             val emu = Emulator(console,controller)
-            emu.add("a","x")
+            //emu.add("a","x")
             db.collection("mappings").document(data).set(emu)
             // tengo que crear un nuevo fragment para crear controllers y consoles
             val action2 = EmulatorSelectionDirections.actionEmulatorSelectionToButtonTable(data)
