@@ -28,7 +28,6 @@ class MappingListAdapter(
         holder.setMapping(mappingList[position])
         holder.getButton().setOnClickListener {
             val action2 = MainMenuDirections.actionMainMenuToGenericMappingList(mappingList[position])
-            //val action2 = MainMenuDirections.actionMainMenuToGenericMappingList(holder)
             holder.view.findNavController().navigate(action2)
         }
     }

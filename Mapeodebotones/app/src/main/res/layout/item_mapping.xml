@@ -14,7 +14,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="216dp">
+        android:layout_height="match_parent">
 
         <TextView
             android:id="@+id/item_kind_name"
@@ -87,9 +87,9 @@
 
         <Button
             android:id="@+id/buttonItem"
-            android:layout_width="224dp"
-            android:layout_height="48dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="219dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="8dp"
             android:text="open"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

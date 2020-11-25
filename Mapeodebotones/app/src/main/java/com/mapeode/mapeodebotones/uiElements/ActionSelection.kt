@@ -6,9 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.EditText
 import android.widget.TextView
 import androidx.navigation.findNavController
-import com.mapeode.mapeodebotones.uiElements.ActionSelection
+import com.google.firebase.firestore.FirebaseFirestore
 import com.mapeode.mapeodebotones.R
 import com.mapeode.mapeodebotones.entities.Game
 
@@ -16,8 +17,11 @@ class ActionSelection : Fragment() {
 
     lateinit var v : View
     lateinit var btnGoToActionTableFromActionSelection: Button
-    lateinit var topText: TextView
-    lateinit var bottomText: TextView
+    lateinit var rightText: TextView
+    lateinit var leftText: TextView
+    lateinit var asLeftEditText: EditText
+    lateinit var asRightEditText: EditText
+    lateinit var game: Game
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,18 +29,23 @@ class ActionSelection : Fragment() {
     ): View? {
         v = inflater.inflate(R.layout.fragment_action_selection,container,false)
         btnGoToActionTableFromActionSelection = v.findViewById(R.id.btnGoToActionTableFromActionSelection)
-        topText = v.findViewById(R.id.asTopText)
-        bottomText = v.findViewById(R.id.asBottomText)
-        topText.text = "What is the name of the action?"
-        bottomText.text = "select the button of the action"
+        rightText = v.findViewById(R.id.asRightText)
+        leftText = v.findViewById(R.id.asLeftText)
+        asLeftEditText = v.findViewById(R.id.asLeftEditText)
+        asRightEditText = v.findViewById(R.id.asRightEditText)
+        rightText.text = "What is the name of the action?"
+        leftText.text = "select the button of the action"
         btnGoToActionTableFromActionSelection.text = "enter"
+        game = ActionSelectionArgs.fromBundle(requireArguments()).game!!
         return v
     }
 
     override fun onStart() {
         super.onStart()
+        game = ActionSelectionArgs.fromBundle(requireArguments()).game!!
         btnGoToActionTableFromActionSelection.setOnClickListener {
-            val action2 = ActionSelectionDirections.actionActionSelectionToActionTable()
+            game.add(asRightEditText.text.toString(),asLeftEditText.text.toString())
+            val action2 = ActionSelectionDirections.actionActionSelectionToActionTable(game)
             v.findNavController().navigate(action2)
         }
     }

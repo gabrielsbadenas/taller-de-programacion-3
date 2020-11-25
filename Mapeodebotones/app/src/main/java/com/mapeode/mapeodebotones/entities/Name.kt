@@ -5,4 +5,5 @@ class Name (name: String="") {
     init{
         this.name=name
     }
+    //clase no usada que se usaba para poner los nombres de consolas, controles y juegos
 }

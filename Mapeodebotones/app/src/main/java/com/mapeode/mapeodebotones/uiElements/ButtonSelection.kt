@@ -25,10 +25,6 @@ class ButtonSelection : Fragment() {
     lateinit var btnGoToButtonTableFromButtonSelection: Button
     lateinit var topText: TextView
     lateinit var bottomText: TextView
-    lateinit var id: String
-    lateinit var topEmulated: String
-    lateinit var bottomController: String
-    var db: FirebaseFirestore = FirebaseFirestore.getInstance()
     lateinit var emu: Emulator
     lateinit var topEditText: EditText
     lateinit var bottomEditText: EditText
@@ -46,37 +42,21 @@ class ButtonSelection : Fragment() {
         bottomText = v.findViewById(R.id.bsBottomText)
         bottomText.text = "button in your controller"
 
-        topEmulated = ""
-        bottomController = ""
-
         topEditText = v.findViewById(R.id.bsTopEditText)
         bottomEditText = v.findViewById(R.id.bsBottomEditText)
 
         btnGoToButtonTableFromButtonSelection.text = "enter"
-        id = ButtonTableArgs.fromBundle(requireArguments()).id.toString()
-        unoSolo(id)
+        emu = ButtonTableArgs.fromBundle(requireArguments()).id!!
 
         return v
     }
 
-    fun unoSolo(path: String) {
-        db.collection("mappings").document(path)
-                .get()
-                .addOnSuccessListener { document ->
-                    if (document != null){
-                        emu = document.toObject(Emulator::class.java)!!
-                    }else{
-                        Log.d(ContentValues.TAG,"no such document")
-                    }
-                }
-    }
-
     override fun onStart() {
         super.onStart()
-
+        emu = ButtonSelectionArgs.fromBundle(requireArguments()).id!!
         btnGoToButtonTableFromButtonSelection.setOnClickListener {
-
-            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable(id)
+            emu.add(topEditText.text.toString(),bottomEditText.text.toString())
+            val action2 = ButtonSelectionDirections.actionButtonSelectionToButtonTable(emu)
             v.findNavController().navigate(action2)
         }
     }

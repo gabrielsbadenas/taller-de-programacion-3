@@ -8,44 +8,26 @@
     tools:context=".uiElements.EmulatorSelection">
 
     <TextView
-        android:id="@+id/emBottomText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="152dp"
+        android:id="@+id/emRightText"
+        android:layout_width="195dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="282dp"
+        android:layout_marginEnd="2dp"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emTopSpinner" />
-
-    <Spinner
-        android:id="@+id/emBottomSpinner"
-        android:layout_width="245dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="36dp"
-        android:background="#AAAAAAAA"
-        android:backgroundTint="#AAAAAAAA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emBottomText" />
-
-    <Spinner
-        android:id="@+id/emTopSpinner"
-        android:layout_width="245dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="32dp"
-        android:background="#AAAAAAAA"
-        android:backgroundTint="#AAAAAAAA"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emTopText" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/emLeftText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/emTopText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:id="@+id/emLeftText"
+        android:layout_width="194dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="281dp"
         android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/emRightText"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -53,12 +35,37 @@
         android:id="@+id/btnGoToButtonTableFromEmulatorSelection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="40dp"
         android:text="next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emBottomSpinner" />
+        app:layout_constraintTop_toBottomOf="@+id/emLeftEditText" />
+
+    <EditText
+        android:id="@+id/emLeftEditText"
+        android:layout_width="195dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="328dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/emRightEditText"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emRightEditText"
+        android:layout_width="195dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="329dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/emLeftEditText"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

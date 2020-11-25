@@ -6,16 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".uiElements.ActionTable">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="391dp"
-        android:layout_height="227dp"
-        android:src="@drawable/ic_launcher_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/btnGoToActionSelectionFromActionTable"
         android:layout_width="wrap_content"
@@ -25,8 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btnGoToMainMenuFromActionTable"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnGoToMainMenuFromActionTable"
@@ -37,7 +26,6 @@
         app:layout_constraintEnd_toStartOf="@+id/btnGoToActionSelectionFromActionTable"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.049" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

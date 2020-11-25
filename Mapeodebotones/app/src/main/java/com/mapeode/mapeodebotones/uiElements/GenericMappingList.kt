@@ -21,10 +21,9 @@ import com.mapeode.mapeodebotones.entities.Mapping
 
 class GenericMappingList : Fragment() {
     lateinit var v : View
-    //lateinit var btnGoToTypeSelectionFromMainMenu: Button
     lateinit var recMapping : RecyclerView
     private lateinit var linearLayoutManager: LinearLayoutManager
-    lateinit var buttons : MutableList<GenericMapping>//= ArrayList<GenericMapping>()
+    lateinit var buttons : MutableList<GenericMapping>
     private lateinit var genericMappingListAdapter: GenericMappingListAdapter
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -36,7 +35,6 @@ class GenericMappingList : Fragment() {
     override fun onStart() {
         super.onStart()
         buttons = GenericMappingListArgs.fromBundle(requireArguments()).buttons.buttons
-        //buttons = ArrayList()
         recMapping.setHasFixedSize(true)
         linearLayoutManager = LinearLayoutManager(this.context)
         recMapping.layoutManager = linearLayoutManager
