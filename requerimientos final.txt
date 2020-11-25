@@ -1,0 +1,14 @@
+mejorar la interfaz
+agregar imagenes al recycler view
+volver a poner spinners
+poner input de imagenes
+si queda tiempo agregar las funcionalidades extra:
+/*
+* funciones que tengo que agregar
+* - borrar mappings
+* - editar mappings
+* - agregar botones
+* - eliminar botones
+* - agregar accion de main menu a action selection o button selection
+* - cambiar nombre de mapping
+* - conseguir el id de un mapping (poner la id como un parametro)*/
