@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.navigation.findNavController
@@ -41,10 +42,22 @@ class MappingListAdapter(
             this.view = v
         }
         fun setMapping(map: Mapping) {
-            val type: TextView = view.findViewById(R.id.item_type)
-            type.text = map.type
-            val typeName: TextView = view.findViewById(R.id.item_type_name)
-            typeName.text = map.typeName
+            val controllerIcon: ImageView = view.findViewById(R.id.controllerIcon)
+            val kindIcon: ImageView = view.findViewById(R.id.kindIcon)
+            if(map.kindName == "nds"){
+                kindIcon.setImageResource(R.drawable.nds)
+            }
+            if(map.kindName == "tetris (nds)"){
+                kindIcon.setImageResource(R.drawable.tetris_nds)
+            }
+            if(map.kindName == "super mario bros"){
+                kindIcon.setImageResource(R.drawable.super_mario_bros)
+            }
+            if(map.controllerName == "ds4"){
+                controllerIcon.setImageResource(R.drawable.ds4)
+            }else{
+                controllerIcon.setImageResource(R.drawable.nes)
+            }
             val kind: TextView = view.findViewById(R.id.item_kind)
             kind.text = map.kind
             val kindName: TextView = view.findViewById(R.id.item_kind_name)
